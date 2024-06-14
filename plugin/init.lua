@@ -108,6 +108,9 @@ local function enable(win, opts, record_attributes)
 
 	overrides.font.font[1].weight = opts.font_weight
 	overrides.font_size = presentation_prev_font_size * opts.font_size_multiplier
+	overrides.maximize = opts.maximize
+
+	presentation_maximize = opts.maximize
 
 	if opts.fullscreen ~= win:get_dimensions().is_full_screen then
 		win:toggle_fullscreen()
