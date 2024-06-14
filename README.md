@@ -10,7 +10,6 @@
 Main repository lives on [GitLab](https://gitlab.com/xarvex/presentation.wez).
 Mirror can found through [GitHub](https://github.com/Xarvex/presentation.wez).
 
-
 ## ⚡️ Quick Start
 
 This will use the defaults. If you'd like to fine tune, keep reading, otherwise:
@@ -19,9 +18,7 @@ This will use the defaults. If you'd like to fine tune, keep reading, otherwise:
 wezterm.plugin.require("https://gitlab.com/xarvex/presentation.wez").apply_to_config(config)
 ```
 
-Then, activate with `CTRL + ALT + P` for presentation mode, or `CTRL + ALT +
-SHIFT + P` for fullscreen presentation.
-
+Then, activate with `CTRL + ALT + P` for presentation mode, or `CTRL + ALT + SHIFT + P` for fullscreen presentation.
 
 ## 🔱 Features
 
@@ -34,11 +31,9 @@ Planned:
 - Color switching customizations.
 - Better reverting of window settings in certain scenarios.
 
-
 ## 🔧 Requirements
 
 - [WezTerm]
-
 
 ## ⚙️ Configuration
 
@@ -48,12 +43,14 @@ Shown is the default settings:
 {
     presentation = {
         enabled = true,
+        maximize = false, -- whether or not to maximize the window
         keybind = { key = "p", mods = "CTRL|ALT" }
         -- font_weight:          active font weight
         -- font_size_multiplier: multiplier for font size
     },
     presentation_full = {
         enabled = true,
+        maximize = false,
         keybind = { key = "p", mods = "CTRL|ALT|SHIFT" }
         -- font_weight:         active font weight
         -- font_size_multipler: multiplier for font size
@@ -62,7 +59,6 @@ Shown is the default settings:
     font_size_multiplier = 2.0 -- multiplier for font size for both modes
 }
 ```
-
 
 ## 💡 Usage
 
@@ -73,6 +69,7 @@ Inside your [WezTerm] config:
 wezterm.plugin.require("https://gitlab.com/xarvex/presentation.wez").apply_to_config(config, {
     font_size_multiplier = 1.8, -- sets for both "presentation" and "presentation_full"
     presentation = {
+        maximize = true, -- maximize the window
         keybind = { key = "t", mods = "SHIFT|SUPER" } -- setting a keybind
     },
     presentation_full = {
@@ -82,10 +79,8 @@ wezterm.plugin.require("https://gitlab.com/xarvex/presentation.wez").apply_to_co
 })
 ```
 
-
 ### 📃 License
 
 _This project is licensed under **Mozilla Public License 2.0**._
 
-
-[WezTerm]: https://wezfurlong.org/wezterm
+[wezterm]: https://wezfurlong.org/wezterm
