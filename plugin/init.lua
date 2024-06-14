@@ -24,7 +24,7 @@ local M = {}
 local default_config = {
 	presentation = {
 		enabled = true,
-		maximize = false,
+		maximize = true,
 		keybind = {
 			key = "p",
 			mods = "CTRL|ALT",
@@ -32,7 +32,7 @@ local default_config = {
 	},
 	presentation_full = {
 		enabled = true,
-		maximize = false,
+		maximize = true,
 		keybind = {
 			key = "p",
 			mods = "CTRL|ALT|SHIFT",
@@ -63,7 +63,7 @@ local presentation_active = false
 local presentation_prev_font_weight
 local presentation_prev_font_size
 local presentation_fullscreen = false
-local presentation_maximize = false
+local presentation_maximize = true
 
 ---@class PresentationOpts
 ---@field fullscreen? boolean

@@ -43,14 +43,14 @@ Shown is the default settings:
 {
     presentation = {
         enabled = true,
-        maximize = false, -- whether or not to maximize the window
+        maximize = true, -- whether or not to maximize the window
         keybind = { key = "p", mods = "CTRL|ALT" }
         -- font_weight:          active font weight
         -- font_size_multiplier: multiplier for font size
     },
     presentation_full = {
         enabled = true,
-        maximize = false,
+        maximize = true,
         keybind = { key = "p", mods = "CTRL|ALT|SHIFT" }
         -- font_weight:         active font weight
         -- font_size_multipler: multiplier for font size
@@ -69,7 +69,7 @@ Inside your [WezTerm] config:
 wezterm.plugin.require("https://gitlab.com/xarvex/presentation.wez").apply_to_config(config, {
     font_size_multiplier = 1.8, -- sets for both "presentation" and "presentation_full"
     presentation = {
-        maximize = true, -- maximize the window
+        maximize = false, -- do NOT maximize the window
         keybind = { key = "t", mods = "SHIFT|SUPER" } -- setting a keybind
     },
     presentation_full = {
